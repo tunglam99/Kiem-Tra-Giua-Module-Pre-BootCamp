@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tinhtuoi(namsinh) {
+        let d = new Date();
+        let tuoi = d.getFullYear() - namsinh;
+        return tuoi;
+    }
+
+    let kq = tinhtuoi(prompt("nhap vao nam sinh:"));
+        if (kq <0) {
+            document.write("khong hop le");
+        } else {
+            document.write("tuoi nguoi do la: " + kq);
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Enter a number: <input type="number" value="" id="input"/>
+<button id="num" type="button" onclick="show()"> Show</button>
+<p id="result"></p>
+
+<script>
+    function kiemtra(n) {
+        if (n<2) {
+            return false;
+        }
+        for (let i = 2; i < n; i++) {
+            if (n%i === 0) {
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    function show() {
+        let input = document.getElementById("input").value;
+        for (let i = 0; i< input; i++) {
+            if (kiemtra(i)) {
+                document.write(" "+ i);
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>
