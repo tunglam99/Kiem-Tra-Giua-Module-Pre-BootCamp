@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    function tinhtuoi(namsinh) {
-        let d = new Date();
-        let tuoi = d.getFullYear() - namsinh;
+    function tinhTuoi(namSinh) {
+        let namHienTai = new Date().getFullYear();
+        let tuoi = namHienTai - namSinh;
         return tuoi;
     }
 
-    let kq = tinhtuoi(prompt("nhap vao nam sinh:"));
-        if (kq <0) {
+    let namSinh = prompt("nhap vao nam sinh:");
+    let ketQua = tinhTuoi(namSinh);
+        if (ketQua <0) {
             document.write("khong hop le");
         } else {
-            document.write("tuoi nguoi do la: " + kq);
+            document.write("tuoi nguoi do la: " + ketQua);
         }
 </script>
 </body>

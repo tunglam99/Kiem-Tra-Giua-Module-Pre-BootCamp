@@ -5,27 +5,27 @@
     <title>Title</title>
 </head>
 <body>
-Enter a number: <input type="number" value="" id="input"/>
-<button id="num" type="button" onclick="show()"> Show</button>
+Enter a number: <input type="number" value="" id="txtNumber"/>
+<button id="num" type="button" onclick="btnShow()">Show</button>
 <p id="result"></p>
 
 <script>
-    function kiemtra(n) {
-        if (n<2) {
+    function kiemTra(number) {
+        if (number<2) {
             return false;
         }
-        for (let i = 2; i < n; i++) {
-            if (n%i === 0) {
+        for (let i = 2; i < number; i++) {
+            if (number%i === 0) {
                     return false;
             }
         }
         return true;
     }
 
-    function show() {
-        let input = document.getElementById("input").value;
-        for (let i = 0; i< input; i++) {
-            if (kiemtra(i)) {
+    function btnShow() {
+        let valueInput = document.getElementById("txtNumber").value;
+        for (let i = 0; i< valueInput; i++) {
+            if (kiemTra(i)) {
                 document.write(" "+ i);
             }
         }
